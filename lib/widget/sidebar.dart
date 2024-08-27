@@ -1,4 +1,5 @@
 import 'package:cashier/main.dart';
+import 'package:cashier/view/AllData.dart';
 import 'package:cashier/view/payment/History.dart';
 import 'package:cashier/view/barang/DataBarang.dart';
 import 'package:cashier/view/login.dart';
@@ -119,6 +120,10 @@ class _SidebarState extends State<Sidebar> {
           if (userRole == 'admin')
             _buildMenuItem(Icons.person, 'Account', () {
               Navigator.push(context,MaterialPageRoute(builder: (context) => Userdata()),);
+          }),
+          if (userRole == 'admin' || userRole == 'petugas' || userRole == 'user')
+          _buildMenuItem(Icons.data_usage_sharp, 'Data', () {
+            Navigator.push(context,MaterialPageRoute(builder: (context) => AllData()),);
           }),
           if (userRole == 'admin' || userRole == 'petugas' || userRole == 'user')
           _buildMenuItem(Icons.history, 'History', () {

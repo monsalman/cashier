@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'dart:convert';
 import 'package:cashier/main.dart';
-import 'package:cashier/widget/shimmer.dart';
 import 'package:cashier/view/payment/DetailTransaksi.dart';
 import 'package:intl/intl.dart';
 

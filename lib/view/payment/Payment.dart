@@ -185,7 +185,10 @@ class _PaymentPageState extends State<PaymentPage> {
                         backgroundColor: Warna,
                         padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                       ),
-                      onPressed: _submitPayment,
+                      onPressed: () {
+                        // Add a slight delay before executing _submitPayment
+                        Future.delayed(Duration(milliseconds: 2000), _submitPayment);
+                      },
                     ),
                   ),
                 ],
